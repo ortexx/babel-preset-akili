@@ -1,0 +1,34 @@
+{
+  "name": "babel-preset-akili",
+  "version": "0.7.0",
+  "description": "Babel preset for Akili framework",
+  "main": "./index.js",
+  "author": {
+    "name": "Balasyan Alexandr",
+    "email": "mywebstreet@gmail.com"
+  },
+  "homepage": "https://akilijs.com",
+  "keywords": [
+    "akili",
+    "preset",
+    "babel",
+    "framework"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "babel-core": "^6.26.3"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ortexx/babel-preset-akili"
+  },
+  "engines": {
+    "node": ">=5.0.0"
+  }
+}
