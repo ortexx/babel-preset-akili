@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-akili",
-  "version": "0.7.2",
+  "version": "1.0.0",
   "description": "Babel preset for Akili framework",
   "main": "./index.js",
   "author": {
