@@ -8,11 +8,11 @@ module.exports = (context, options)  => {
 
   const presets = [];
 
-  options.usePresetEnv && presets.push([require("babel-preset-env"), options.presetEnvOptions]);
-  options.usePresetStage2 && presets.push([require("babel-preset-stage-2"), options.presetStage2Options]);
-  options.usePresetStage3 && presets.push([require("babel-preset-stage-3", options.presetStage3Options)]);
+  options.usePresetEnv && presets.push([require("@babel/preset-env"), options.presetEnvOptions]);
+  options.usePresetStage2 && presets.push([require("@babel/preset-stage-2"), options.presetStage2Options]);
+  options.usePresetStage3 && presets.push([require("@babel/preset-stage-3", options.presetStage3Options)]);
   
   return {
     presets: presets
-  }  
+  }
 };
