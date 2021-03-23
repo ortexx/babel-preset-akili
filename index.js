@@ -22,7 +22,7 @@ module.exports = (context, options)  => {
   options.useAsyncAwait && plugins.push([require('@babel/plugin-syntax-dynamic-import'), options.pluginAsyncAwaitOptions]);
   options.useDynamicImport && plugins.push([require('@babel/plugin-transform-async-to-generator'), options.pluginDynamicImportOptions]);
   options.useDecorators && plugins.push([require('@babel/plugin-proposal-decorators'), options.pluginDecoratorsOptions]);
-  options.useClassProperties && plugins.push([require('@babel/plugin-proposal-decorators'), options.pluginClassPropertiesOptions]);
+  options.useClassProperties && plugins.push([require('@babel/plugin-proposal-class-properties'), options.pluginClassPropertiesOptions]);
   
   return {
     presets: presets,
