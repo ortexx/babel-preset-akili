@@ -1,18 +1,31 @@
 
+
 module.exports = (context, options)  => {
   options = Object.assign({ 
     usePresetEnv: true,
-    usePresetStage2: true,
-    usePresetStage3: true
+    useAsyncAwait: true,
+    useDynamicImport: true,
+    useClassProperties: true,
+    useDecorators: true,
+    pluginDecoratorsOptions: {
+      legacy: true 
+    },
+    pluginClassPropertiesOptions: {
+      loose: true 
+    }
   }, options || {});
 
   const presets = [];
+  const plugins = [];
 
   options.usePresetEnv && presets.push([require("@babel/preset-env"), options.presetEnvOptions]);
-  options.usePresetStage2 && presets.push([require("@babel/preset-stage-2"), options.presetStage2Options]);
-  options.usePresetStage3 && presets.push([require("@babel/preset-stage-3", options.presetStage3Options)]);
+  options.useAsyncAwait && plugins.push([require('@babel/plugin-syntax-dynamic-import'), options.pluginAsyncAwaitOptions]);
+  options.useDynamicImport && plugins.push([require('@babel/plugin-transform-async-to-generator'), options.pluginDynamicImportOptions]);
+  options.useDecorators && plugins.push([require('@babel/plugin-proposal-decorators'), options.pluginDecoratorsOptions]);
+  options.useClassProperties && plugins.push([require('@babel/plugin-proposal-decorators'), options.pluginClassPropertiesOptions]);
   
   return {
-    presets: presets
+    presets: presets,
+    plugins: plugins
   }
 };
