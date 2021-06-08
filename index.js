@@ -8,9 +8,6 @@ module.exports = (context, options)  => {
     useDecorators: true,
     pluginDecoratorsOptions: {
       legacy: true 
-    },
-    pluginClassPropertiesOptions: {
-      loose: true 
     }
   }, options || {});
 
