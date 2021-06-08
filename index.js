@@ -1,5 +1,3 @@
-
-
 module.exports = (context, options)  => {
   options = Object.assign({ 
     usePresetEnv: true,
